@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #2b3a55; /* Dark blue background */
+  font-family: Arial, sans-serif;
+}
+
+.calculator {
+  background-color: #3b4a6b; /* Slightly lighter background for the calculator body */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  max-width: 320px;
+  width: 100%;
+}
+
+.display input {
+  width: 100%;
+  height: 60px;
+  font-size: 28px;
+  text-align: right;
+  padding: 10px;
+  border: none;
+  background-color: #1b2338; /* Dark background for display */
+  color: #fff;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+button {
+  font-size: 24px;
+  padding: 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+/* Number buttons with white background */
+button:nth-child(1), /* 7 */
+button:nth-child(2), /* 8 */
+button:nth-child(3), /* 9 */
+button:nth-child(5), /* 4 */
+button:nth-child(6), /* 5 */
+button:nth-child(7), /* 6 */
+button:nth-child(9), /* 1 */
+button:nth-child(10), /* 2 */
+button:nth-child(11), /* 3 */
+button:nth-child(13), /* . */
+button:nth-child(14) /* 0 */ {
+  background-color: #fff;
+  color: #000;
+}
+
+button:hover {
+  background-color: #f0f0f0;
+}
+
+/* DEL and RESET buttons with dark blue background */
+button:nth-child(4), /* DEL */
+button.span-two { /* RESET */
+  background-color: #2c3e50; /* Darker blue */
+  color: white;
+}
+
+button:nth-child(4):hover,
+button.span-two:hover {
+  background-color: #1f2d3b; /* Even darker blue on hover */
+}
+
+/* Operator buttons except = with white background */
+button:nth-child(8), /* + */
+button:nth-child(12), /* - */
+button:nth-child(15), /* / */
+button:nth-child(16) /* x */ {
+  background-color: #fff;
+  color: #000;
+}
+
+button:nth-child(8):hover,
+button:nth-child(12):hover,
+button:nth-child(15):hover,
+button:nth-child(16):hover {
+  background-color: #f0f0f0;
+}
+
+/* Equals (=) button with dark orange background */
+button:nth-child(18) {
+  background-color: #c0392b; /* Darker orange */
+  color: white;
+}
+
+button:nth-child(18):hover {
+  background-color: #a93226; /* Even darker orange on hover */
+}
+
+/* Span two columns for RESET and = */
+.span-two {
+  grid-column: span 2;
+}
+x
